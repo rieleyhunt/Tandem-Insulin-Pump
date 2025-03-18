@@ -14,20 +14,29 @@ SOURCES += \
 
 
 HEADERS += \
-    mainwindow.h
-    BasalSettingsScreen.h
-    BatteryIndicator.h
-    BatteryManager.h
-    BolusCalculator.h 
-    BolusCalculatorView.h
-    BolusScreen.h
-    CGMDataProcessor.h
-    DataGraph.h
-    DataLogger.h 
-    DeliveryControlScreen.h
-    ErrorHandler.h 
-    HistoryScreen.h 
-    HomeScreen.h
+    mainwindow.h \
+    BasalSettingsScreen.h \
+    BatteryIndicator.h \
+    BatteryManager.h \
+    BolusCalculator.h \
+    BolusCalculatorView.h \
+    BolusScreen.h \
+    CGMDataProcessor.h \
+    DataGraph.h \
+    DataLogger.h \
+    DeliveryControlScreen.h \
+    ErrorHandler.h \
+    HistoryScreen.h \
+    HomeScreen.h \
+    InsulinGauge.h \
+    InsulinReservoir.h \
+    PINLockScreen.h \
+    ProfileManagementScreen.h \
+    PumpController.h \
+    SettingsScreen.h \
+    TandemInsulinPump.h \
+    UserProfileManager.h \
+    UserSettingsManager.h
     
 FORMS += \
     mainwindow.ui
