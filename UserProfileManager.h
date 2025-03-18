@@ -1,5 +1,5 @@
-#ifndef USERPROFILEMANAGER
-#define USERPROFILEMANAGER
+#ifndef USERPROFILEMANAGER_H
+#define USERPROFILEMANAGER_H
 
 class UserProfileManager{
 
@@ -9,4 +9,4 @@ class UserProfileManager{
 
 };
 
-#endif //USERPROFILEMANAGER
+#endif //USERPROFILEMANAGER_H

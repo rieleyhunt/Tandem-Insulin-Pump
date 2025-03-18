@@ -12,9 +12,23 @@ SOURCES += \
     main.cpp \
     mainwindow.cpp
 
+
 HEADERS += \
     mainwindow.h
-
+    BasalSettingsScreen.h
+    BatteryIndicator.h
+    BatteryManager.h
+    BolusCalculator.h 
+    BolusCalculatorView.h
+    BolusScreen.h
+    CGMDataProcessor.h
+    DataGraph.h
+    DataLogger.h 
+    DeliveryControlScreen.h
+    ErrorHandler.h 
+    HistoryScreen.h 
+    HomeScreen.h
+    
 FORMS += \
     mainwindow.ui
 

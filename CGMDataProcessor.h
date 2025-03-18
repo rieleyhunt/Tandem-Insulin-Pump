@@ -1,7 +1,7 @@
-#ifdef USERPROFILEMANAGER
-#define USERPROFILEMANAGER
+#ifndef CGMDATAPROCESSOR_H
+#define CGMDATAPROCESSOR_H
 
-class UserProfileManager{
+class CGMDataProcessor{
 
     private:
 
@@ -9,4 +9,4 @@ class UserProfileManager{
 
 };
 
-#endif //USERPROFILEMANAGER
+#endif //CGMDATAPROCESSOR_H
