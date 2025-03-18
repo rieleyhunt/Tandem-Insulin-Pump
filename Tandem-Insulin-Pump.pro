@@ -34,7 +34,6 @@ HEADERS += \
     ProfileManagementScreen.h \
     PumpController.h \
     SettingsScreen.h \
-    TandemInsulinPump.h \
     UserProfileManager.h \
     UserSettingsManager.h
     
