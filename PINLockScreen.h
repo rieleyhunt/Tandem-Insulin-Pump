@@ -1,21 +1,37 @@
 // Security screen requriing PIN entry to access the pump
-#ifndef PINLOCKSCREEN_H
-#define PINLOCKSCREEN_H
+#ifndef PIN_LOCK_SCREEN_H
+#define PIN_LOCK_SCREEN_H
 
-#include <QWidget>
+#include <QObject>
+#include <string>
+
+using namespace std;
 
 class PINLockScreen : public QWidget {
     Q_OBJECT
+
 public:
     explicit PINLockScreen(QWidget *parent = nullptr);
     ~PINLockScreen();
 
-private slots:
-    void onPinEntered(const QString &pin);
+    // Set and Verify PIN
+    void setPin(string& newPin);
+    bool verifyPin(string& enteredPin) const;
+
+    // Lock and Unlock Functions
+    void lock();
+    bool unlock(string& enteredPin);
+
+    // Status Check
+    bool isLocked() const;
 
 signals:
-    void accessGranted();
-    void accessDenied();
+    void lockedStatusChanged(bool locked);
+    void pinVerified(bool success);
+
+private:
+    string pin;
+    bool locked;
 };
 
-#endif // PINLOCKSCREEN_H
+#endif // PIN_LOCK_SCREEN_H

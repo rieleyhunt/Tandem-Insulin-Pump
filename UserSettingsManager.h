@@ -3,31 +3,44 @@
 #ifndef USER_SETTINGS_MANAGER_H
 #define USER_SETTINGS_MANAGER_H
 
-#include <QWidget>
+#include <QObject>
+#include <string>
 
-class UserSettingsManager{
+using namespace std;
 
-    public:
-        UserSettingsManager();
-        ~UserSettingsManager();
+class UserSettingsManager : public QObject {
+    Q_OBJECT
 
-        // PIN Security Methods
-        void setPin();
-        bool verifyPin(const std::string& enteredPin) const;
+public:
+    explicit UserSettingsManager(QObject* parent = nullptr);
+    ~UserSettingsManager();
 
-        // Display Settings Methods
-        void setBrightness(int level);
-        int getBrightness() const;
+    // PIN Security Methods
+    void setPin(string& newPin);
+    bool verifyPin(string& enteredPin) const;
 
-        // Alert Tone Methods
-        void setAlertTone(int alertTone);
+    // Display Settings Methods
+    void setBrightness(int level);
+    int getBrightness() const;
 
-        // Getters
-        bool getPinSecurity();
-        int getDisplayBrightness();
-        int getAlertTone();
+    // Alert Tone Methods
+    void setAlertTone(string& tone);
+    string getAlertTone() const;
 
-    private:
+    // General Settings Methods
+    void setSetting();
+    string getSetting() const;
+
+signals:
+    void pinChanged();
+    void brightnessChanged(int newBrightness);
+    void alertToneChanged(string& newTone);
+    void settingUpdated(string& key, string& value);
+
+private:
+    string pin;
+    int brightness;
+    string alertTone;
 
 };
 

@@ -1,3 +1,4 @@
+//Home screen displaying insulin delivery, battery, CGM data, and navigation buttons.
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
