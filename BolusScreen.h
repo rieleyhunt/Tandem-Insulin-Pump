@@ -1,3 +1,4 @@
+//Provides interface for manual bolus entry and calculation.
 #ifndef BOLUSSCREEN_H
 #define BOLUSSCREEN_H
 

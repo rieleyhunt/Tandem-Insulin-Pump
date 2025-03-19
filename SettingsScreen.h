@@ -2,13 +2,18 @@
 #ifndef SETTINGSSCREEN_H
 #define SETTINGSSCREEN_H
 
-#include <QWidget>
+#include <QObject>
+#include <string>
+
+using namespace std;
 
 class SettingsScreen : public QWidget {
     Q_OBJECT
 public:
     explicit SettingsScreen(QWidget *parent = nullptr);
     ~SettingsScreen();
+
+    
 
 private slots:
     void updateAlerts();

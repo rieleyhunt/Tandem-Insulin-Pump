@@ -1,18 +1,23 @@
-#ifndef BATTERY_INDICATOR_H
-#define BATTERY_INDICATOR_H
-
 //Displays real-time battery percentage.
-class BatteryIndicator {
+#ifndef BATTERYINDICATOR_H
+#define BATTERYINDICATOR_H
+
+#include <QWidget>
+
+class BatteryIndicator : public QWidget {
+    Q_OBJECT
 public:
-    BatteryIndicator();
+    explicit BatteryIndicator(QWidget *parent = nullptr);
     ~BatteryIndicator();
 
-    int getBatteryPercentage() const;
-    void updateBatteryPercentage();
+    void setBatteryLevel(int level);
+
+signals:
+    void batteryLow();
 
 private:
-    int batteryPercentage;
-
+    int batteryLevel;
+    void updateDisplay();
 };
 
-#endif // BATTERY_INDICATOR_H
+#endif // BATTERYINDICATOR_H

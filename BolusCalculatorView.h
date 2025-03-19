@@ -1,3 +1,4 @@
+//Displays recommended bolus dose and allows adjustments.
 #ifndef BATTERYINDICATOR_H
 #define BATTERYINDICATOR_H
 
