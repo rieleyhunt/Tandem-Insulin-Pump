@@ -1,3 +1,4 @@
+// Provides access to device settings, including PIN lock, alerts, and calibration
 #ifndef SETTINGSSCREEN_H
 #define SETTINGSSCREEN_H
 

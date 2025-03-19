@@ -1,14 +1,34 @@
 // Manages and stores application settings like PIN security,
 // display brightness, and alert tones
-#ifndef USERSETTINGSMANAGER_H
-#define USERSETTINGSMANAGER_H
+#ifndef USER_SETTINGS_MANAGER_H
+#define USER_SETTINGS_MANAGER_H
+
+#include <QWidget>
 
 class UserSettingsManager{
 
-    private:
-
     public:
+        UserSettingsManager();
+        ~UserSettingsManager();
+
+        // PIN Security Methods
+        void setPin();
+        bool verifyPin(const std::string& enteredPin) const;
+
+        // Display Settings Methods
+        void setBrightness(int level);
+        int getBrightness() const;
+
+        // Alert Tone Methods
+        void setAlertTone(int alertTone);
+
+        // Getters
+        bool getPinSecurity();
+        int getDisplayBrightness();
+        int getAlertTone();
+
+    private:
 
 };
 
-#endif // USERSETTINGSMANAGER_H
+#endif // USER_SETTINGS_MANAGER_H

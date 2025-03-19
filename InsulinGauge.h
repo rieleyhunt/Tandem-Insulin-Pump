@@ -1,7 +1,8 @@
 #ifndef INSULINGAUGE_H
 #define INSULINGAUGE_H
 
-// Shows the remaining insulin in the reservoir
+#include <QTWidget>
+// QT UI for the reservoir shows the remaining insulin in the reservoir
 class InsulinGauge {
 private:
     float level;

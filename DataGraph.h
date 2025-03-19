@@ -2,6 +2,8 @@
 #ifndef DATAGRAPH_H
 #define DATAGRAPH_H
 
+#include <QWidget>
+
 class DataGraph{
 
     private:

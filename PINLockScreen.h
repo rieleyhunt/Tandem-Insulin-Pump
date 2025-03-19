@@ -1,3 +1,4 @@
+// Security screen requriing PIN entry to access the pump
 #ifndef PINLOCKSCREEN_H
 #define PINLOCKSCREEN_H
 

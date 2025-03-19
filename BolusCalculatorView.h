@@ -1,6 +1,7 @@
 #ifndef BATTERYINDICATOR_H
 #define BATTERYINDICATOR_H
 
+
 class BatteryIndicator {
 public:
     BatteryIndicator();
