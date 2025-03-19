@@ -12,6 +12,7 @@ public:
 private:
     void loadDeliveryLogs();
     void loadAlertsHistory();
+    void loadCGMHistory();
 };
 
 #endif // HISTORYSCREEN_H
