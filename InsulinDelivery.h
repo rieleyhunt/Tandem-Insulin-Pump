@@ -3,14 +3,16 @@
 #ifndef INSULINDELIVERY_H
 #define INSULINDELIVERY_H
 
+using namespace std;
+
 class InsulinDelivery{
 
     private:
-        t_time timestamp;
+        time_t timestamp;
         float bolus;
 
     public:
-        InsulinDelivery(t_time time, float bolus);
+        InsulinDelivery(time_t time, float bolus);
         ~InsulinDelivery();
 
 };
