@@ -1,8 +1,9 @@
-//Manager.h
+// Manages and stores application settings like PIN security,
+// display brightness, and alert tones
 #ifndef USERSETTINGSMANAGER_H
 #define USERSETTINGSMANAGER_H
 
-class PumpController{
+class UserSettingsManager{
 
     private:
 
@@ -10,4 +11,4 @@ class PumpController{
 
 };
 
-#endif //USERSETTINGSMANAGER_H
+#endif // USERSETTINGSMANAGER_H
