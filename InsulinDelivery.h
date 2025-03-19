@@ -1,9 +1,9 @@
-#include <ctime> 
+//Data type that stores insulin delivery hisotry. Used in DataLogger.h
+
+#include <ctime>
 
 #ifndef INSULINDELIVERY_H
 #define INSULINDELIVERY_H
-
-using namespace std;
 
 class InsulinDelivery{
 
@@ -14,7 +14,9 @@ class InsulinDelivery{
     public:
         InsulinDelivery(time_t time, float bolus);
         ~InsulinDelivery();
-
+        float get_bolus();
+        time_t get_timestamp();
+        void print_timestamp();
 };
 
 #endif //INSULINDELIVERY_H
