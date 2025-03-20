@@ -2,17 +2,22 @@
 #ifndef BATTERYINDICATOR_H
 #define BATTERYINDICATOR_H
 
+#include "BolusCalculator.h"
 
-class BatteryIndicator {
-public:
-    BatteryIndicator();
-    ~BatteryIndicator();
+class BolusCalculatorView {
+    public:
+        BolusCalculatorView(BolusCalculator& calculator);
+        
+        void displayRecommendedDose(double bloodGlucose, double carbs);
+        double getUserAdjustedDose() const;
+        
+    private:
+        BolusCalculator& calculator;
+        double recommendedDose;
+        double adjustedDose;
 
-    void setLevel(float level);
-    float getLevel() const;
-
-private:
-    float level;
-};
+    slot:
+        void slotBolusCalaculated(double bolusDose);
+    };
 
 #endif // BATTERYINDICATOR_H

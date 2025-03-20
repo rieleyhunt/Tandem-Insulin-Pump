@@ -1,6 +1,6 @@
 // Plots insulin delivery and CGM data over time
-#ifndef DATAGRAPH_H
-#define DATAGRAPH_H
+#ifndef DATA_GRAPH_H
+#define DATA_GRAPH_H
 
 #include <QWidget>
 

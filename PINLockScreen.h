@@ -14,8 +14,7 @@ public:
     explicit PINLockScreen(QWidget *parent = nullptr);
     ~PINLockScreen();
 
-    // Set and Verify PIN
-    void setPin(string& newPin);
+    // Verify PIN
     bool verifyPin(string& enteredPin) const;
 
     // Lock and Unlock Functions

@@ -4,11 +4,11 @@
 
 class BolusCalculator{
 
-    public:
-    double calculateBolus(double carbIntake, double currentBG);
-
 signals:
-    void bolusCalculated(double bolusDose);
+    void bolusCalculated(double bolusDose);//signal to send bolus dose to pump and display
+
+slots:
+    double calculateBolus(double carbIntake, double currentBG);
 };
 
 #endif //BOLUSCALCULATOR_H
