@@ -1,14 +1,23 @@
 #ifndef INSULINRESERVOIR_H
 #define INSULINRESERVOIR_H
 
-// Tracks the remaining insulin in the pump and updates the reservoir
-class InsulinReservoir{
+#include <QObject>
 
-    private:
-        
-    public:
-        InsulinReservoir();
-        updateReservoir
+class InsulinReservoir : public QObject {
+    Q_OBJECT
+
+private:
+    float level;
+
+public:
+    explicit InsulinReservoir(QObject *parent = nullptr);
+    ~InsulinReservoir();
+
+    void setLevel(float level);
+    float getLevel() const;
+
+signals:
+    void levelChanged(float newLevel);
 };
 
-#endif //INSULINRESERVOIR_H
+#endif // INSULINRESERVOIR_H
