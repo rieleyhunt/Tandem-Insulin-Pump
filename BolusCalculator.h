@@ -5,10 +5,10 @@
 class BolusCalculator{
 
 signals:
-    void bolusCalculated(double bolusDose);//signal to send bolus dose to pump and display
+    void bolusCalculated(double bolusDose);//emits to BolusScreen to show user
 
 slots:
-    double calculateBolus(double carbIntake, double currentBG);
+    double slotCalculateBolus(double carbIntake, double currentBG);
 };
 
 #endif //BOLUSCALCULATOR_H

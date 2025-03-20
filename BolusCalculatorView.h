@@ -1,23 +1,27 @@
 //Displays recommended bolus dose and allows adjustments.
-#ifndef BATTERYINDICATOR_H
-#define BATTERYINDICATOR_H
+#ifndef BOLUS_CALCULATOR_VIEW_H
+#define BOLUS_CALCULATOR_VIEW_H
 
+#include <QObject>
 #include "BolusCalculator.h"
 
-class BolusCalculatorView {
-    public:
-        BolusCalculatorView(BolusCalculator& calculator);
-        
-        void displayRecommendedDose(double bloodGlucose, double carbs);
-        double getUserAdjustedDose() const;
-        
-    private:
-        BolusCalculator& calculator;
-        double recommendedDose;
-        double adjustedDose;
+class BolusCalculatorView : public QObject {
+    Q_OBJECT
 
-    slot:
-        void slotBolusCalaculated(double bolusDose);
-    };
+public:
+    explicit BolusCalculatorView(BolusCalculator& calculator, QObject* parent = nullptr);
+    int
 
-#endif // BATTERYINDICATOR_H
+slots:
+    void displayRecommendedDose(double dose);
+
+signals:
+    void signalCalculateBolus(double carbIntake, double currentBG);//emits to BolusCalculator
+    void confirmedDose(double dose);  //emits to BolusScreen and pump when user confirms dose
+
+private:
+    BolusCalculator& calculator;
+    double recommendedDose;
+};
+
+#endif // BOLUS_CALCULATOR_VIEW_H

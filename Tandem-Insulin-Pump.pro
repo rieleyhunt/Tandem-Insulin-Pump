@@ -28,6 +28,7 @@ HEADERS += \
     ErrorHandler.h \
     HistoryScreen.h \
     HomeScreen.h \
+    InsulinDelivery.h \ 
     InsulinGauge.h \
     InsulinReservoir.h \
     PINLockScreen.h \
